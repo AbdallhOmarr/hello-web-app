@@ -5,4 +5,5 @@ pkgs.python3.withPackages (ps: with ps; [
   gunicorn
 ]) // {
   buildInputs = [ pkgs.gcc ];
+  startCommand = ''./start.sh'';
 }
