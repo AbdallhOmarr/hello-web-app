@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeting Page</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Greeting Page</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="nameInput">Enter your name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nameInput"
+                name="name"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="displayGreeting()"
+            >
+              Say hello
+            </button>
+          </form>
+          <div class="mt-4">
+            <p id="greeting"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+      function displayGreeting() {
+        var name = document.getElementById("nameInput").value;
+        var greeting = "Hello, " + name + "!";
+        document.getElementById("greeting").innerHTML = greeting;
+      }
+    </script>
+  </body>
+</html>
